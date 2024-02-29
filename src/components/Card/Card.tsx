@@ -5,7 +5,6 @@ import { Product } from "../../types/Product";
 
 type Props = {
   product: Product;
-  loading: boolean;
 };
 
 const Card: React.FC<Props> = ({ product }) => {
@@ -19,8 +18,8 @@ const Card: React.FC<Props> = ({ product }) => {
       ></div>
 
       <div className="card-content">
-        <CardHeader category={product.category}  />
-        <CardBody {...product}  />
+        <CardHeader category={product.category} />
+        <CardBody {...product} />
       </div>
     </div>
   );

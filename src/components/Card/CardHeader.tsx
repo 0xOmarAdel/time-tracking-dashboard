@@ -1,15 +1,22 @@
 import CardMenu from "./CardMenu";
 import ItemCategory from "../Item/ItemCategory";
 import { ProductCategory } from "../../types/Product";
+import ItemCategorySkeleton from "../../skeletons/ItemCategorySkeleton";
 
 type Props = {
-  category: ProductCategory;
+  category?: ProductCategory;
+  loading?: boolean;
 };
 
-const CardHeader: React.FC<Props> = ({ category }) => {
+const CardHeader: React.FC<Props> = ({ category, loading }) => {
   return (
     <div className="card-header">
-      <ItemCategory category={category} /> <CardMenu />
+      {loading ? (
+        <ItemCategorySkeleton />
+      ) : (
+        <ItemCategory category={category!} />
+      )}
+      <CardMenu />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import useAxios from "../hooks/useAxios";
 import Card from "./Card/Card";
 import { Product } from "../types/Product";
+import CardsSkeletons from "../skeletons/CardsSkeletons";
 
 const ProductList = () => {
   const {
@@ -21,9 +22,11 @@ const ProductList = () => {
 
   return (
     <div className="cards-container">
-      {products?.map((product) => (
-        <Card key={product.id} product={product} loading={loading} />
-      ))}
+      {loading ? (
+        <CardsSkeletons number={10} />
+      ) : (
+        products?.map((product) => <Card key={product.id} product={product} />)
+      )}
     </div>
   );
 };
