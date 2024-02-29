@@ -1,0 +1,51 @@
+.item-category {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21.33px;
+}
+
+.item-details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 976px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.3rem;
+  }
+
+  .item-title {
+    color: #bbc0ff;
+    line-height: 15.75px;
+    font-size: 10px;
+    font-weight: 400;
+
+    @media (min-width: 1440px) {
+      font-size: 12px;
+      line-height: 14.22px;
+    }
+  }
+
+  .item-price {
+    font-weight: 300;
+    font-size: 39px;
+    line-height: 46.22px;
+    color: white;
+    display: block;
+  }
+}
+
+.item-stock,
+.item-quantity {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.22px;
+  color: white;
+  display: block;
+  text-align: center;
+}
