@@ -1,5 +1,8 @@
 # Time Tracking Dashboard
 
+![Screenshot](screenshot.png)
+
+
 ## Project Overview
 
 This repository contains the implementation of a time tracking dashboard based on the provided design and requirements. The project utilizes React.js with TypeScript for the frontend, SASS for styling, and Axios for handling API requests. The data for the cards is fetched from the [Fake Store API](https://fakestoreapi.com/products?limit=10) using the GET list request.
