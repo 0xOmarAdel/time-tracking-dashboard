@@ -1,6 +1,6 @@
-import { ProductWithTitle } from "../../types/Product";
+import { ProductTitle } from "../../types/Product";
 
-const ItemTitle: React.FC<ProductWithTitle> = ({ title }) => {
+const ItemTitle = ({ title }: { title: ProductTitle }) => {
   return (
     <p className="item-title line-clamp" title={title}>
       {title}

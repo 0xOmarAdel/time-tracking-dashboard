@@ -1,7 +1,7 @@
-import { ProductWithPrice } from "../../types/Product";
+import { ProductPrice } from "../../types/Product";
 import currencyFormatter from "../../utils/currencyFormatter";
 
-const ItemPrice: React.FC<ProductWithPrice> = ({ price }) => {
+const ItemPrice = ({ price }: { price: ProductPrice }) => {
   return <span className="item-price">{currencyFormatter(price)}</span>;
 };
 

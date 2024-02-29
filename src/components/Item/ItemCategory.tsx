@@ -1,6 +1,6 @@
-import { ProductWithCategory } from "../../types/Product";
+import { ProductCategory } from "../../types/Product";
 
-const ItemCategory: React.FC<ProductWithCategory> = ({ category }) => {
+const ItemCategory = ({ category }: { category: ProductCategory }) => {
   return <h3 className="item-category">{category}</h3>;
 };
 
