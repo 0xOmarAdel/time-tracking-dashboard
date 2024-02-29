@@ -1,6 +1,15 @@
+import { useState } from "react";
 import avatar from "../assets/avatar.png";
 
+const links = [
+  { id: 1, text: "Daily" },
+  { id: 2, text: "Weekly" },
+  { id: 3, text: "Monthly" },
+];
+
 const UserCard = () => {
+  const [activeLink, setActiveLink] = useState(2);
+
   return (
     <div className="user-card">
       <div className="user-card-header">
@@ -15,9 +24,16 @@ const UserCard = () => {
         </div>
       </div>
       <ul className="user-card-menu">
-        <li className="user-card-link">Daily</li>
-        <li className="user-card-link active">Weekly</li>
-        <li className="user-card-link">Monthly</li>
+        {links.map((link) => (
+          <li
+            className={`user-card-link ${
+              activeLink === link.id ? "active" : ""
+            }`}
+            onClick={() => setActiveLink(link.id)}
+          >
+            {link.text}
+          </li>
+        ))}
       </ul>
     </div>
   );
