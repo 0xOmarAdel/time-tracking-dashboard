@@ -9,3 +9,18 @@ body {
   background-color: $bodyColor;
   font-family: $primaryFont;
 }
+
+.xl-visible {
+  display: none;
+
+  @media (min-width: 976px) {
+    display: block;
+  }
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
