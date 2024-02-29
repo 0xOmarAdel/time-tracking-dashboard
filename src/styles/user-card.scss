@@ -1,0 +1,86 @@
+.user-card {
+  height: fit-content;
+  background-color: #1c204b;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  align-self: baseline;
+
+  grid-template-columns: 1fr;
+  grid-column: span 6 / span 6;
+
+  width: 100%;
+
+  @media (min-width: 976px) {
+    grid-column: span 1 / span 1;
+    width: fit-content;
+  }
+
+  .user-card-header {
+    background-color: #5747ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 30px 20px;
+    gap: 2.1rem;
+
+    .user-avatar-container {
+      width: 138px;
+      height: 145px;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        min-width: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    div:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 50px;
+    }
+
+    span:nth-child(1) {
+      font-size: 15px;
+      color: #bbc0ff;
+      font-weight: 400;
+      line-height: 17.78px;
+    }
+
+    span:nth-child(2) {
+      color: white;
+      letter-spacing: 12px;
+      line-height: 47.4px;
+      font-weight: 300;
+      font-size: 40px;
+    }
+  }
+
+  .user-card-menu {
+    list-style: none;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 25px 35px 30px;
+
+    .user-card-link {
+      color: #7078c9;
+      line-height: 21.33px;
+      font-size: 18px;
+      font-weight: 400;
+      cursor: pointer;
+
+      &.active {
+        color: white;
+      }
+    }
+  }
+}
