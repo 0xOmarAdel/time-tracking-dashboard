@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# Time Tracking Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This repository contains the implementation of a time tracking dashboard based on the provided design and requirements. The project utilizes React.js with TypeScript for the frontend, SASS for styling, and Axios for handling API requests. The data for the cards is fetched from the [Fake Store API](https://fakestoreapi.com/products?limit=10) using the GET list request.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Getting Started
 
-## Expanding the ESLint configuration
+Follow these steps to run the project locally:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+git clone https://github.com/0xOmarAdel/time-tracking-dashboard.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install dependencies:
+
+```bash
+cd time-tracking-dashboard
+npm install
+```
+
+3. Run the project:
+
+```bash
+npm start
+```
+
+This will start the development server, and you can view the dashboard in your browser at `http://localhost:3000`.
+
+## Technologies Used
+
+- **React.js:** JavaScript library for building user interfaces.
+- **TypeScript:** Superset of JavaScript that adds static typing.
+- **SASS:** CSS extension language for more maintainable and organized styles.
+- **Axios:** Promise-based HTTP client for making API requests.
+
+## Design
+
+The header (navbar) design for the dashboard has been created and can be viewed on [Figma](https://www.figma.com/file/UsF6jByMG1WK84pOJSaQfM/Luftborn?type=design&node-id=0-1&mode=design&t=mmliINrVf0EkdeRg-0).
