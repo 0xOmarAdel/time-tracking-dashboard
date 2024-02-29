@@ -28,10 +28,6 @@ export interface ProductsProps {
   products: Product[];
 }
 
-/**
- * Represents a product with only a specific property.
- */
-export type ProductWithOnly<T extends keyof Product> = Pick<Product, T>;
-export type ProductWithTitle = ProductWithOnly<"title">;
-export type ProductWithPrice = ProductWithOnly<"price">;
-export type ProductWithCategory = ProductWithOnly<"category">;
+export type ProductTitle = Product["title"];
+export type ProductPrice = Product["price"];
+export type ProductCategory = Product["category"];
