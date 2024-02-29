@@ -6,8 +6,18 @@ type UseAxiosProps = {
   method?: string;
 };
 
-const useAxios = ({ url, method = "GET" }: UseAxiosProps) => {
-  const [data, setData] = useState<[] | null>(null);
+type UseAxiosResponse<T> = {
+  data: T | null;
+  loading: boolean;
+  error: AxiosError | null;
+  runAxios: () => Promise<void>;
+};
+
+const useAxios = <T,>({
+  url,
+  method = "GET",
+}: UseAxiosProps): UseAxiosResponse<T> => {
+  const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<AxiosError | null>(null);
 
