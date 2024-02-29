@@ -1,5 +1,5 @@
 import { useState } from "react";
-import avatar from "../assets/avatar.png";
+import avatar from "../assets/avatar.webp";
 
 const links = [
   { id: 1, text: "Daily" },
