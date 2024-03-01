@@ -18,9 +18,7 @@ const UserCard = () => {
         </div>
         <div>
           <span>Report for</span>
-          <span>
-            Best <br className="xl-visible" /> Sales
-          </span>
+          <span>Best Sales</span>
         </div>
       </div>
       <ul className="user-card-menu">

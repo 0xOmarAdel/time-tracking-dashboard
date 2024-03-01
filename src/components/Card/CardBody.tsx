@@ -15,13 +15,13 @@ type Props = {
 const CardBody: React.FC<Props> = ({ price, title, loading }) => {
   return (
     <div className="card-body">
+      {loading ? <ItemPriceSkeleton /> : <ItemPrice price={price!} />}
       <div className="item-details">
-        {loading ? <ItemPriceSkeleton /> : <ItemPrice price={price!} />}
         {loading ? <ItemTitleSkeleton /> : <ItemTitle title={title!} />}
-      </div>
-      <div className="xl-visible">
-        <ItemStock />
-        <ItemQuantity />
+        <div className="xl-visible">
+          <ItemStock />
+          <ItemQuantity />
+        </div>
       </div>
     </div>
   );
